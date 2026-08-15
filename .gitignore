@@ -1,0 +1,12 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+
+# Compiled assembly: built locally by the post-build step and by CI, not committed
+modfiles/TwitchChatRimworld/1.6/Assemblies/*.dll
+modfiles/TwitchChatRimworld/1.6/Assemblies/*.pdb
+
+*.stackdump

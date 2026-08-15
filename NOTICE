@@ -1,0 +1,15 @@
+Twitch Chat RimWorld
+Copyright (C) 2026 Kurainu
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License version 3 as published by the Free
+Software Foundation. The full text is in the LICENSE file. If you distribute a
+modified version, you must also make its complete source available under the
+same license.
+
+Portions of this mod derive from MIT-licensed work; those permission notices are
+retained as MIT requires:
+
+  - Interaction Bubbles by Jaxe-Dev (MIT), covering the on-map speech-bubble
+    rendering in Source/TwitchChat/TwitchChat/Interface/ and the related Harmony
+    patches.

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+
+  <TwitchChat.Toggle>Show TwitchChat</TwitchChat.Toggle>
+  <TwitchChat_TabTwitch>Twitch</TwitchChat_TabTwitch>
+  <TwitchChat_LinkedTo>Linked to</TwitchChat_LinkedTo>
+  <TwitchChat_RepickBtn>(Re-)Pick Random</TwitchChat_RepickBtn>
+  <TwitchChat_RepickDescr>Gives a new random chat-name to this Pawn</TwitchChat_RepickDescr>
+  <TwitchChat_RepickWaiting>waiting for rename...</TwitchChat_RepickWaiting>
+  <TwitchChat_PickChatterBtn>Choose chatter…</TwitchChat_PickChatterBtn>
+  <TwitchChat_PickChatterDescr>Pick a Twitch chatter from a searchable list to link to this pawn.</TwitchChat_PickChatterDescr>
+  <TwitchChat_PickEmpty>No chatters seen yet.</TwitchChat_PickEmpty>
+  <TwitchChat_RemoveLinkBtn>Remove link</TwitchChat_RemoveLinkBtn>
+  <TwitchChat_RemoveLinkDescr>Not happy with the linked user? End it here.</TwitchChat_RemoveLinkDescr>
+
+  <!-- Settings window -->
+  <TwitchChat_Set_ConnectionHeader>Twitch connection</TwitchChat_Set_ConnectionHeader>
+  <TwitchChat_Set_AnonNote>No Twitch account, token or login needed. The mod reads chat anonymously (read-only). Just enter a channel below.</TwitchChat_Set_AnonNote>
+  <TwitchChat_Set_ChannelLabel>Channel</TwitchChat_Set_ChannelLabel>
+  <TwitchChat_Set_ChannelDesc>The channel whose chat to read: the name only, not the full URL. No login or token needed; the mod reads chat anonymously.</TwitchChat_Set_ChannelDesc>
+  <TwitchChat_Set_StatusConnected>Connected</TwitchChat_Set_StatusConnected>
+  <TwitchChat_Set_StatusDisconnected>Not connected</TwitchChat_Set_StatusDisconnected>
+  <TwitchChat_Set_StatusNoChannel>No channel set</TwitchChat_Set_StatusNoChannel>
+  <TwitchChat_Set_StatusConnecting>Connecting…</TwitchChat_Set_StatusConnecting>
+  <TwitchChat_Set_StatusLabel>Status: {0}</TwitchChat_Set_StatusLabel>
+  <TwitchChat_Set_ChannelValue>Channel: {0}</TwitchChat_Set_ChannelValue>
+  <TwitchChat_Set_LastMessage>Last message: {0}</TwitchChat_Set_LastMessage>
+  <TwitchChat_Set_HintNoChannel>Enter the channel whose chat you want to read to get started.</TwitchChat_Set_HintNoChannel>
+  <TwitchChat_Set_HintConnecting>Contacting Twitch… this usually takes a few seconds.</TwitchChat_Set_HintConnecting>
+  <TwitchChat_Set_HintDisconnected>Click Test connection to connect. If it fails, check the channel name is spelled correctly and that you're online.</TwitchChat_Set_HintDisconnected>
+  <TwitchChat_Set_TestConnection>Test connection</TwitchChat_Set_TestConnection>
+  <TwitchChat_Set_TestConnectionDesc>Wait a few seconds after clicking. If the status stays "Not connected", recheck the fields above.</TwitchChat_Set_TestConnectionDesc>
+
+  <!-- Onboarding -->
+  <TwitchChat_Nudge_SetChannel>Twitch Chat: set a channel in Mod Options → Twitch Chat to start naming pawns after your chat.</TwitchChat_Nudge_SetChannel>
+
+  <TwitchChat_Set_NamingHeader>Automatic naming</TwitchChat_Set_NamingHeader>
+  <TwitchChat_Set_NamingIntro>The mod tracks recently active chatters and gives their names to eligible pawns.</TwitchChat_Set_NamingIntro>
+  <TwitchChat_Set_NameOther>Name raiders, mechs, insects and visitors</TwitchChat_Set_NameOther>
+  <TwitchChat_Set_NameOtherOn>Raiders, mechs, insects and visitors get named after chatters.</TwitchChat_Set_NameOtherOn>
+  <TwitchChat_Set_NameOtherOff>Raiders, mechs, insects and visitors keep their default names.</TwitchChat_Set_NameOtherOff>
+  <TwitchChat_Set_NameWild>Name wild animals</TwitchChat_Set_NameWild>
+  <TwitchChat_Set_NameWildOn>Wild animals on the map get named after chatters.</TwitchChat_Set_NameWildOn>
+  <TwitchChat_Set_NameWildOff>Wild animals keep their default names.</TwitchChat_Set_NameWildOff>
+  <TwitchChat_Set_NameTame>Name tamed animals</TwitchChat_Set_NameTame>
+  <TwitchChat_Set_NameTameOn>Your tamed animals get named after chatters, existing ones too, not just new.</TwitchChat_Set_NameTameOn>
+  <TwitchChat_Set_NameTameOff>Your tamed animals keep their own names.</TwitchChat_Set_NameTameOff>
+  <TwitchChat_Set_Reuse>Allow the same name on more than one pawn</TwitchChat_Set_Reuse>
+  <TwitchChat_Set_ReuseOn>A chatter name can be reused across pawns (e.g. an animal and a raider).</TwitchChat_Set_ReuseOn>
+  <TwitchChat_Set_ReuseOff>Each chatter name is used on at most one pawn.</TwitchChat_Set_ReuseOff>
+  <TwitchChat_Set_PoolSize>Recent chatters tracked: {0}</TwitchChat_Set_PoolSize>
+  <TwitchChat_Set_PoolSizeDesc>How many recent chatters to keep for naming and the picker.</TwitchChat_Set_PoolSizeDesc>
+
+  <TwitchChat_Set_MessagesHeader>Chat messages &amp; bubbles</TwitchChat_Set_MessagesHeader>
+  <TwitchChat_Set_ShowBubbles>Show speech bubbles</TwitchChat_Set_ShowBubbles>
+  <TwitchChat_Set_ShowBubblesOn>Chatters' messages appear above the pawn they're linked to.</TwitchChat_Set_ShowBubblesOn>
+  <TwitchChat_Set_ShowBubblesOff>Speech bubbles are hidden.</TwitchChat_Set_ShowBubblesOff>
+  <TwitchChat_Set_ShowEmotes>Show emotes</TwitchChat_Set_ShowEmotes>
+  <TwitchChat_Set_ShowEmotesOn>Twitch, 7TV, BTTV and FFZ emotes are drawn in the bubbles.</TwitchChat_Set_ShowEmotesOn>
+  <TwitchChat_Set_ShowEmotesOff>Emotes show as their text instead of images.</TwitchChat_Set_ShowEmotesOff>
+  <TwitchChat_Set_EmoteTwitch>Twitch emotes</TwitchChat_Set_EmoteTwitch>
+  <TwitchChat_Set_EmoteSevenTv>7TV emotes</TwitchChat_Set_EmoteSevenTv>
+  <TwitchChat_Set_EmoteBttv>BTTV emotes</TwitchChat_Set_EmoteBttv>
+  <TwitchChat_Set_EmoteFfz>FFZ emotes</TwitchChat_Set_EmoteFfz>
+  <TwitchChat_Set_EmoteEmoji> Unicode Emoji</TwitchChat_Set_EmoteEmoji>
+  <TwitchChat_Set_BubbleDuration>Bubble duration: {0} s</TwitchChat_Set_BubbleDuration>
+  <TwitchChat_Set_BubbleDurationDesc>How long each speech bubble stays on screen (1 to 60 seconds).</TwitchChat_Set_BubbleDurationDesc>
+
+  <TwitchChat_Set_ModerationHeader>Moderation</TwitchChat_Set_ModerationHeader>
+  <TwitchChat_Set_IgnoreBots>Ignore common chat bots</TwitchChat_Set_IgnoreBots>
+  <TwitchChat_Set_IgnoreBotsOn>Known service bots (Nightbot, StreamElements, Moobot…) are never named or shown.</TwitchChat_Set_IgnoreBotsOn>
+  <TwitchChat_Set_IgnoreBotsOff>Chat bots are treated like any other chatter.</TwitchChat_Set_IgnoreBotsOff>
+  <TwitchChat_Set_Blacklist>Blacklisted chatters</TwitchChat_Set_Blacklist>
+  <TwitchChat_Set_BlacklistDesc>These users are ignored for naming and bubbles.</TwitchChat_Set_BlacklistDesc>
+  <TwitchChat_Set_BlacklistAddBtn>Add</TwitchChat_Set_BlacklistAddBtn>
+  <TwitchChat_Set_BlacklistRemoveBtn>Remove</TwitchChat_Set_BlacklistRemoveBtn>
+  <TwitchChat_Set_BlacklistEmpty>No one is blacklisted.</TwitchChat_Set_BlacklistEmpty>
+
+</LanguageData>

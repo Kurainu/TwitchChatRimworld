@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>TwitchChat</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>true</Deterministic>
+    <Nullable>disable</Nullable>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- Mods reference game-provided assemblies; don't drag copies into the output. -->
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4871" />
+    <PackageReference Include="Lib.Harmony" Version="2.3.6" PrivateAssets="all" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <!-- modfiles/TwitchChatRimworld is the drop-in mod folder (About, Languages, 1.6, ...). Drop the
+       freshly-built assembly into its 1.6/Assemblies after every build so it stays a complete, current mod. -->
+  <PropertyGroup>
+    <ModFilesDir>$([System.IO.Path]::GetFullPath('$(MSBuildProjectDirectory)/../../modfiles/TwitchChatRimworld'))</ModFilesDir>
+  </PropertyGroup>
+
+  <Target Name="CopyAssemblyToModFiles" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModFilesDir)/1.6/Assemblies" SkipUnchangedFiles="false" />
+    <Message Importance="high" Text="[TwitchChat] $(TargetFileName) -&gt; $(ModFilesDir)/1.6/Assemblies" />
+  </Target>
+
+</Project>
