@@ -2,12 +2,11 @@
 
 <LanguageData>
 
-  <TwitchChat.Toggle>Show TwitchChat</TwitchChat.Toggle>
   <TwitchChat_TabTwitch>Twitch</TwitchChat_TabTwitch>
   <TwitchChat_LinkedTo>Linked to</TwitchChat_LinkedTo>
   <TwitchChat_RepickBtn>(Re-)Pick Random</TwitchChat_RepickBtn>
   <TwitchChat_RepickDescr>Gives a new random chat-name to this Pawn</TwitchChat_RepickDescr>
-  <TwitchChat_RepickWaiting>waiting for rename...</TwitchChat_RepickWaiting>
+  <TwitchChat_RepickNoneFree>No free chatter. With shared names off, all recent chatters are taken.</TwitchChat_RepickNoneFree>
   <TwitchChat_PickChatterBtn>Choose chatter…</TwitchChat_PickChatterBtn>
   <TwitchChat_PickChatterDescr>Pick a Twitch chatter from a searchable list to link to this pawn.</TwitchChat_PickChatterDescr>
   <TwitchChat_PickEmpty>No chatters seen yet.</TwitchChat_PickEmpty>
@@ -18,7 +17,7 @@
   <TwitchChat_Set_ConnectionHeader>Twitch connection</TwitchChat_Set_ConnectionHeader>
   <TwitchChat_Set_AnonNote>No Twitch account, token or login needed. The mod reads chat anonymously (read-only). Just enter a channel below.</TwitchChat_Set_AnonNote>
   <TwitchChat_Set_ChannelLabel>Channel</TwitchChat_Set_ChannelLabel>
-  <TwitchChat_Set_ChannelDesc>The channel whose chat to read: the name only, not the full URL. No login or token needed; the mod reads chat anonymously.</TwitchChat_Set_ChannelDesc>
+  <TwitchChat_Set_ChannelDesc>The channel whose chat to read: the name only, not the full URL.</TwitchChat_Set_ChannelDesc>
   <TwitchChat_Set_StatusConnected>Connected</TwitchChat_Set_StatusConnected>
   <TwitchChat_Set_StatusDisconnected>Not connected</TwitchChat_Set_StatusDisconnected>
   <TwitchChat_Set_StatusNoChannel>No channel set</TwitchChat_Set_StatusNoChannel>
@@ -46,9 +45,9 @@
   <TwitchChat_Set_NameTame>Name tamed animals</TwitchChat_Set_NameTame>
   <TwitchChat_Set_NameTameOn>Your tamed animals get named after chatters, existing ones too, not just new.</TwitchChat_Set_NameTameOn>
   <TwitchChat_Set_NameTameOff>Your tamed animals keep their own names.</TwitchChat_Set_NameTameOff>
-  <TwitchChat_Set_Reuse>Allow the same name on more than one pawn</TwitchChat_Set_Reuse>
-  <TwitchChat_Set_ReuseOn>A chatter name can be reused across pawns (e.g. an animal and a raider).</TwitchChat_Set_ReuseOn>
-  <TwitchChat_Set_ReuseOff>Each chatter name is used on at most one pawn.</TwitchChat_Set_ReuseOff>
+  <TwitchChat_Set_Reuse>Let an animal and a person share a name</TwitchChat_Set_Reuse>
+  <TwitchChat_Set_ReuseOn>The same name can go on one animal and one person, but never on two animals or two people.</TwitchChat_Set_ReuseOn>
+  <TwitchChat_Set_ReuseOff>Each chatter names at most one pawn.</TwitchChat_Set_ReuseOff>
   <TwitchChat_Set_PoolSize>Recent chatters tracked: {0}</TwitchChat_Set_PoolSize>
   <TwitchChat_Set_PoolSizeDesc>How many recent chatters to keep for naming and the picker.</TwitchChat_Set_PoolSizeDesc>
 

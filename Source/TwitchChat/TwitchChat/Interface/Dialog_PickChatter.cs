@@ -40,6 +40,7 @@ public class Dialog_PickChatter : Window
 
 		var logins = ChatterPool.Snapshot();
 		logins.Reverse(); // most-recent first
+		logins = ChatNamer.Pickable(pawn, logins).ToList(); // hide already-used chatters unless reuse is on
 		if (!string.IsNullOrEmpty(search))
 		{
 			string needle = search.ToLowerInvariant();

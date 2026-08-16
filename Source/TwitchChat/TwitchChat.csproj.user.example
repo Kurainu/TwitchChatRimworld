@@ -1,0 +1,24 @@
+<Project>
+
+  <!-- To auto-deploy the built mod into your RimWorld Mods folder while developing:
+       copy this file to "TwitchChat.csproj.user" (which is gitignored) and set your own path below.
+       MSBuild imports the .user file automatically; the deploy is skipped when the path doesn't exist. -->
+  <PropertyGroup>
+    <RimworldModsDir Condition="'$(RimworldModsDir)' == ''">C:\Path\To\Steam\steamapps\common\RimWorld\Mods</RimworldModsDir>
+  </PropertyGroup>
+
+  <Target Name="DeployToRimworld" AfterTargets="CopyAssemblyToModFiles" Condition="Exists('$(RimworldModsDir)')">
+    <PropertyGroup>
+      <DeployDir>$(RimworldModsDir)\TwitchChatRimworld</DeployDir>
+    </PropertyGroup>
+    <ItemGroup>
+      <DeployFiles Include="$(ModFilesDir)/**/*" />
+    </ItemGroup>
+    <RemoveDir Directories="$(DeployDir)" ContinueOnError="true" />
+    <Copy SourceFiles="@(DeployFiles)"
+          DestinationFiles="@(DeployFiles->'$(DeployDir)/%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="false" ContinueOnError="true" />
+    <Message Importance="high" Text="[TwitchChat] deployed -&gt; $(DeployDir)" />
+  </Target>
+
+</Project>

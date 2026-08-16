@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LanguageData>
 
-  <TwitchChat.Toggle>Show TwitchChat</TwitchChat.Toggle>
   <TwitchChat_TabTwitch>Twitch</TwitchChat_TabTwitch>
   <TwitchChat_LinkedTo>Linked zu</TwitchChat_LinkedTo>
   <TwitchChat_RepickBtn>Zufällig Wählen</TwitchChat_RepickBtn>
-  <TwitchChat_RepickDescr>Wähle einen zufälligen chat Benutzer für diesen Pawn</TwitchChat_RepickDescr>
-  <TwitchChat_RepickWaiting>warte auf chat...</TwitchChat_RepickWaiting>
+  <TwitchChat_RepickDescr>Gibt diesem Pawn einen zufälligen Chatter-Namen.</TwitchChat_RepickDescr>
+  <TwitchChat_RepickNoneFree>Alle Chatter sind schon vergeben. Warte bis neue Chatter chatten</TwitchChat_RepickNoneFree>
   <TwitchChat_PickChatterBtn>Chatter wählen…</TwitchChat_PickChatterBtn>
   <TwitchChat_PickChatterDescr>Wähle einen Twitch-Chatter aus einer durchsuchbaren Liste, um ihn mit diesem Pawn zu verknüpfen.</TwitchChat_PickChatterDescr>
   <TwitchChat_PickEmpty>Noch keine Chatter gesehen.</TwitchChat_PickEmpty>
@@ -18,7 +16,7 @@
   <TwitchChat_Set_ConnectionHeader>Twitch-Verbindung</TwitchChat_Set_ConnectionHeader>
   <TwitchChat_Set_AnonNote>Kein Twitch-Konto, Token oder Login nötig. Der Mod liest den Chat anonym (nur lesend). Gib unten einfach einen Kanal ein.</TwitchChat_Set_AnonNote>
   <TwitchChat_Set_ChannelLabel>Kanal</TwitchChat_Set_ChannelLabel>
-  <TwitchChat_Set_ChannelDesc>Der Kanal, dessen Chat gelesen wird: nur der Name, nicht die vollständige URL. Kein Login oder Token nötig; der Mod liest den Chat anonym.</TwitchChat_Set_ChannelDesc>
+  <TwitchChat_Set_ChannelDesc>Der Kanal, dessen Chat gelesen wird: nur der Name, nicht die vollständige URL.</TwitchChat_Set_ChannelDesc>
   <TwitchChat_Set_StatusConnected>Verbunden</TwitchChat_Set_StatusConnected>
   <TwitchChat_Set_StatusDisconnected>Nicht verbunden</TwitchChat_Set_StatusDisconnected>
   <TwitchChat_Set_StatusNoChannel>Kein Kanal festgelegt</TwitchChat_Set_StatusNoChannel>
@@ -36,7 +34,7 @@
   <TwitchChat_Nudge_SetChannel>Twitch Chat: Lege in den Mod-Optionen → Twitch Chat einen Kanal fest, um Pawns nach deinem Chat zu benennen.</TwitchChat_Nudge_SetChannel>
 
   <TwitchChat_Set_NamingHeader>Automatische Benennung</TwitchChat_Set_NamingHeader>
-  <TwitchChat_Set_NamingIntro>Der Mod merkt sich kürzlich aktive Chatter und gibt ihre Namen an passende Pawns.</TwitchChat_Set_NamingIntro>
+  <TwitchChat_Set_NamingIntro>Der Mod merkt sich kürzlich aktive Chatter und vergibt ihre Namen an passende Pawns.</TwitchChat_Set_NamingIntro>
   <TwitchChat_Set_NameOther>Räuber, Mechs, Insekten und Besucher benennen</TwitchChat_Set_NameOther>
   <TwitchChat_Set_NameOtherOn>Räuber, Mechs, Insekten und Besucher werden nach Chattern benannt.</TwitchChat_Set_NameOtherOn>
   <TwitchChat_Set_NameOtherOff>Räuber, Mechs, Insekten und Besucher behalten ihre Standardnamen.</TwitchChat_Set_NameOtherOff>
@@ -46,9 +44,9 @@
   <TwitchChat_Set_NameTame>Gezähmte Tiere benennen</TwitchChat_Set_NameTame>
   <TwitchChat_Set_NameTameOn>Deine gezähmten Tiere werden nach Chattern benannt, auch bestehende, nicht nur neue.</TwitchChat_Set_NameTameOn>
   <TwitchChat_Set_NameTameOff>Deine gezähmten Tiere behalten ihre eigenen Namen.</TwitchChat_Set_NameTameOff>
-  <TwitchChat_Set_Reuse>Denselben Namen für mehrere Pawns erlauben</TwitchChat_Set_Reuse>
-  <TwitchChat_Set_ReuseOn>Ein Chatter-Name kann für mehrere Pawns verwendet werden (z. B. ein Tier und ein Räuber).</TwitchChat_Set_ReuseOn>
-  <TwitchChat_Set_ReuseOff>Jeder Chatter-Name wird für höchstens einen Pawn verwendet.</TwitchChat_Set_ReuseOff>
+  <TwitchChat_Set_Reuse>Ein Tier und eine Person dürfen denselben Namen tragen</TwitchChat_Set_Reuse>
+  <TwitchChat_Set_ReuseOn>Derselbe Name kann auf einem Tier und einer Person liegen, aber nie auf zwei Tieren oder zwei Personen.</TwitchChat_Set_ReuseOn>
+  <TwitchChat_Set_ReuseOff>Jeder Chatter benennt höchstens einen Pawn.</TwitchChat_Set_ReuseOff>
   <TwitchChat_Set_PoolSize>Gemerkte Chatter: {0}</TwitchChat_Set_PoolSize>
   <TwitchChat_Set_PoolSizeDesc>Wie viele der letzten Chatter für Benennung und Auswahl behalten werden.</TwitchChat_Set_PoolSizeDesc>
 

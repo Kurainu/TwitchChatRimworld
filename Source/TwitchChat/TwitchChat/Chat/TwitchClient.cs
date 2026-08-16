@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 using TwitchChat.Emotes;
@@ -169,6 +170,13 @@ internal static class TwitchClient
 		CheckState();
 	}
 
+	// one-shot on game start: bring the socket up if a channel is set, so the player doesn't have to hit the button
+	public static void AutoConnect()
+	{
+		if (IsConnected() || NormalizeChannel(Config.twitchChannel).Length == 0) return;
+		Reconnect();
+	}
+
 	// Tear down on leaving/quitting; stays disconnected until the user connects again.
 	public static void Shutdown()
 	{
@@ -178,28 +186,12 @@ internal static class TwitchClient
 
 	private static void HandleMessage(ChatLine line)
 	{
-		// dev-mode: dump the raw line and parsed segments to check the tag parser and emote resolution
 		if (Prefs.DevMode)
-		{
-			Log.Message($"[Twitch Chat] recv login='{line.Login}' display='{line.Display}'\n  raw: {line.Raw}");
-			foreach (ChatSegment seg in emotes.Parse(line.Message, line.Emotes))
-			{
-				if (!seg.IsEmote)
-				{
-					Log.Message($"[Twitch Chat]   text  \"{seg.Text}\" IsEmote: {seg.IsEmote}");
-				}
-				else if (seg.Image.Url != null)
-				{
-					Log.Message($"[Twitch Chat]   emote {seg.Text} {seg.Image.Url} IsEmote: {seg.IsEmote}");
-				}
-				else
-				{
-					Log.Message($"[Twitch Chat]   emote {seg.Text} unresolved");
-				}
-			}
-		}
+        {
+            Log.Message($"[Twitch Chat] recv login='{line.Login}' display='{line.Display}' " + string.Join(" | ", emotes.Parse(line.Message, line.Emotes).Select(seg => !seg.IsEmote ? $"text \"{seg.Text}\"" : seg.Image.Url != null ? $"emote {seg.Text} {seg.Image.Url}" : $"emote {seg.Text} unresolved")));
+        }
 
-		var settings = Config;
+        var settings = Config;
 
 		// skip known service bots (by login)
 		if (settings.ignoreServiceBots && line.Login != null && ServiceBots.Contains(line.Login)) return;

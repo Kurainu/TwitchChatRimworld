@@ -1,3 +1,4 @@
+using TwitchChat.Chat;
 using Verse;
 
 namespace TwitchChat.Naming;
@@ -7,6 +8,11 @@ public class ChatPulse : GameComponent
 {
 	public ChatPulse(Game game)
 	{
+	}
+
+	public override void FinalizeInit()
+	{
+		TwitchClient.AutoConnect();
 	}
 
 	public override void GameComponentTick()

@@ -31,4 +31,7 @@
     <Message Importance="high" Text="[TwitchChat] $(TargetFileName) -&gt; $(ModFilesDir)/1.6/Assemblies" />
   </Target>
 
+  <!-- Optional local deploy into RimWorld's Mods folder happens in TwitchChat.csproj.user (gitignored),
+       so a personal Steam path never lands in the repo. Copy TwitchChat.csproj.user.example to set it up. -->
+
 </Project>

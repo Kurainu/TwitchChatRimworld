@@ -13,6 +13,12 @@ public class TwitchTab : ITab_Pawn_Gear
 	private const float TopPadding = 8f;
 	private const float LeftPadding = 10f;
 	private const float RowHeight = 24f;
+	private const float WarnSeconds = 4f;
+
+	private static readonly Color WarnColor = new Color(1f, 0.6f, 0.25f);
+
+	private Pawn repickWarnPawn;
+	private float repickWarnUntil;
 
 	public override bool IsVisible => true;
 
@@ -54,12 +60,30 @@ public class TwitchTab : ITab_Pawn_Gear
 		row.width = 135f;
 		if (Widgets.ButtonText(row, "TwitchChat_RepickBtn".Translate()))
 		{
-			ChatNamer.ForceRename(SelPawnForGear);
+			if (ChatNamer.ForceRename(SelPawnForGear))
+			{
+				repickWarnPawn = null;
+			}
+			else
+			{
+				repickWarnPawn = SelPawnForGear;
+				repickWarnUntil = Time.realtimeSinceStartup + WarnSeconds;
+			}
 		}
 
 		row.y += RowHeight;
 		row.width = contentWidth;
-		Widgets.Label(row, "TwitchChat_RepickDescr".Translate());
+		if (repickWarnPawn == SelPawnForGear && Time.realtimeSinceStartup < repickWarnUntil)
+		{
+			Rect warnRect = new Rect(row.x, row.y, row.width, RowHeight * 2f);
+			GUI.color = WarnColor;
+			Widgets.Label(warnRect, "TwitchChat_RepickNoneFree".Translate());
+			GUI.color = Color.white;
+		}
+		else
+		{
+			Widgets.Label(row, "TwitchChat_RepickDescr".Translate());
+		}
 
 		row.y += RowHeight + 16f;
 		row.width = 135f;
